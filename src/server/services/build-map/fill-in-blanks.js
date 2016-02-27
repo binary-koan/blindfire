@@ -1,6 +1,6 @@
 import { times } from "lodash";
 
-import blankTile from "../../objects/map/blank";
+import blankTile from "../../models/map/blank-tile";
 
 export default function fillInBlanks(tiles) {
   times(tiles.length, x => {

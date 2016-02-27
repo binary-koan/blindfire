@@ -1,6 +1,6 @@
 import { compact, find, flatMap, includes, times } from "lodash";
 
-import blankTile from "../../objects/map/blank";
+import blankTile from "../../models/map/blank-tile";
 
 // Picked at random but designed to give a good balance between performance and ability to actually
 // join up maps

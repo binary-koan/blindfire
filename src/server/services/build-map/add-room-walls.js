@@ -1,6 +1,6 @@
 import { max, min, random, sample, sampleSize, times } from "lodash";
 
-import wallTile from "../../objects/map/wall";
+import wallTile from "../../models/map/wall-tile";
 
 export default function addRoomWalls(tiles, complexity, { x, y, width, height }) {
   const possibleWalls = [

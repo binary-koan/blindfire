@@ -2,8 +2,8 @@ import test from "tape";
 import { includes, some } from "lodash";
 
 import fillInBlanks from "../../../../src/server/services/build-map/fill-in-blanks";
-import wallTile from "../../../../src/server/objects/map/wall";
-import blankTile from "../../../../src/server/objects/map/blank";
+import wallTile from "../../../../src/server/models/map/wall-tile";
+import blankTile from "../../../../src/server/models/map/blank-tile";
 
 test("Filling in blanks", t => {
   const tiles = [

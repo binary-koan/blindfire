@@ -1,6 +1,6 @@
 import { times } from "lodash";
 
-import wallTile from "../../objects/map/wall";
+import wallTile from "../../models/map/wall-tile";
 
 export default function generateOuterWalls(tiles) {
   times(tiles.length, firstCoord => {

@@ -2,8 +2,8 @@ import test from "tape";
 import { clone } from "lodash";
 
 import ensureConnectedMap from "../../../../src/server/services/build-map/ensure-connected-map";
-import wallTile from "../../../../src/server/objects/map/wall";
-import blankTile from "../../../../src/server/objects/map/blank";
+import wallTile from "../../../../src/server/models/map/wall-tile";
+import blankTile from "../../../../src/server/models/map/blank-tile";
 
 function tileBlankness(tiles) {
   return tiles.map(list =>

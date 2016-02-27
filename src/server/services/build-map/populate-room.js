@@ -1,6 +1,6 @@
 import { random, times } from "lodash";
 
-import treeTile from "../../objects/map/tree";
+import treeTile from "../../models/map/tree-tile";
 
 const TREE_MULTIPLIER = 2;
 

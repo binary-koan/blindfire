@@ -30,7 +30,6 @@
     "gulp-util": "^3.0.7",
     "proxyquire": "^1.7.4",
     "require-dir": "^0.3.0",
-    "rewire": "^2.5.1",
     "sinon": "^1.17.3",
     "tape": "^4.4.0",
     "vinyl-buffer": "^1.0.0",
