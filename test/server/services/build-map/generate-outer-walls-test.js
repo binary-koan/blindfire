@@ -1,7 +1,7 @@
 import test from "tape";
 import { every, isUndefined } from "lodash";
 
-import generateOuterWalls from "../../../../src/server/services/build-map/generate-outer-walls";
+import generateOuterWalls from "../../..//server/services/build-map/generate-outer-walls";
 
 test("Generate outer walls", t => {
   const tiles = [

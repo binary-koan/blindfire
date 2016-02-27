@@ -1,7 +1,7 @@
 import test from "tape";
 import { some, every } from "lodash";
 
-import populateRoom from "../../../../src/server/services/build-map/populate-room";
+import populateRoom from "../../..//server/services/build-map/populate-room";
 
 test("Populating the room", t => {
   const tiles = [

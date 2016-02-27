@@ -10,7 +10,7 @@ const MAX_SEARCH_DISTANCE = 6;
 // This allows creating a set of arrays (points) with a meaningful implementation of `has()`,
 // `without()`, etc.
 function createPointSet(initialValues) {
-  const base = new Map(initialValues.map(value => [value.toString(), value]));
+  const base = new(Map)(initialValues.map(value => [value.toString(), value]));
 
   return {
     base,
@@ -31,7 +31,7 @@ function createPointSet(initialValues) {
     },
 
     mergeEach: (callback) => {
-      const itemsToMerge = new Set();
+      const itemsToMerge = new(Set);
 
       base.forEach((item) => {
         callback(item).forEach(newItem => itemsToMerge.add(newItem))

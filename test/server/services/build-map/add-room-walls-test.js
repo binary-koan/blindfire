@@ -1,7 +1,7 @@
 import test from "tape";
 import { some, every } from "lodash";
 
-import addRoomWalls from "../../../../src/server/services/build-map/add-room-walls";
+import addRoomWalls from "../../../../server/services/build-map/add-room-walls";
 
 test("Adding room walls", t => {
   const tiles = [

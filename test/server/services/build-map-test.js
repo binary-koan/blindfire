@@ -19,7 +19,7 @@ test("Build map service", t => {
   };
   const expectedTiles = fill(Array(12), []);
 
-  const buildMap = proxyquire("../../../src/server/services/build-map", spies).default;
+  const buildMap = proxyquire("../../../server/services/build-map", spies).default;
 
   buildMap(12, 1);
 

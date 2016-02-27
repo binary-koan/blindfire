@@ -1,5 +1,5 @@
-// Where this project source code lives.
-const SRC = "src/app";
+// Where the client-side source code lives.
+const CLIENT_SRC = "client";
 
 // Where final distribution files will be copied.
 const DIST = "dist";
@@ -17,13 +17,13 @@ export const dirs = { build: BUILD, dist: DIST };
 
 export const files = {
   assets: `${STATIC}/**`,
-  scripts: `${SRC}/**/*.js`,
+  scripts: `${CLIENT_SRC}/**/*.js`,
   phaser: PHASER
 };
 
 export const browserify = {
   debug: true,
   standalone: "app",
-  entries: [`${SRC}/app.js`],
+  entries: [`${CLIENT_SRC}/app.js`],
   transform: ["babelify"]
 };
