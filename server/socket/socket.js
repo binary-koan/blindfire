@@ -1,7 +1,7 @@
 import io from "socket.io";
 
-import GameManager from "./models/game-manager";
-import GameSocketClient from "./models/game-socket-client";
+import GameManager from "./game-manager";
+import GameSocketClient from "./game-client";
 import gameToJson from "./presenters/game-to-json";
 import actionsToJson from "./presenters/actions-to-json";
 
@@ -20,16 +20,20 @@ socket.on("connection", socketClient => {
   client.on("submit actions", partial(gameManager.submitActions, client));
 });
 
-gameManager.on("joined game", ({ game, clients }) => {
-  sendToClients(clients, "joined game", { game: gameToJson(game) });
+gameManager.on("client joined", ({ game, clients }) => {
+  sendToClients(clients, "client joined", { game: gameToJson(game) });
 });
 
-gameManager.on("started game", ({ game, clients }) => {
-  sendToClients(clients, "started game", { game: gameToJson(game) });
+gameManager.on("game started", ({ game, clients }) => {
+  sendToClients(clients, "game started", { game: gameToJson(game) });
 });
 
-gameManager.on("processed actions", ({ game, clients, actions }) => {
-  sendToClients(clients, "processed actions", { game: gameToJson(game), actions: actionsToJson(actions) });
+gameManager.on("actions received", ({ game, client }) => {
+  sendToClients([client], "actions received");
+});
+
+gameManager.on("actions processed", ({ game, clients, actions }) => {
+  sendToClients(clients, "actions processed", { game: gameToJson(game), actions: actionsToJson(actions) });
 });
 
 gameManager.on("error", ({ clients, message }) {
