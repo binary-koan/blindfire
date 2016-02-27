@@ -1,7 +1,10 @@
 import test from "tape";
+import proxyquire from "proxyquire";
 import { some, every } from "lodash";
 
-import addRoomWalls from "../../../../server/services/build-map/add-room-walls";
+const addRoomWalls = proxyquire("../../../../server/services/build-map/add-room-walls", {
+  lodash: { random: (min, max) => max || min } // Make sure that the maximum number of walls are added
+}).default;
 
 test("Adding room walls", t => {
   const tiles = [

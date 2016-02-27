@@ -1,6 +1,6 @@
 import test from "tape";
 
-import generateRooms from "../../..//server/services/build-map/generate-rooms";
+import generateRooms from "../../../../server/services/build-map/generate-rooms";
 
 test("Generate rooms :: Single room", t => {
   const rooms = generateRooms(12, 1);
